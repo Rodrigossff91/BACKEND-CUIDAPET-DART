@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:BACKEND_CUIDAPET_DART/application/config/application_config.dart';
 import 'package:args/args.dart';
 import 'package:shelf/shelf.dart' as shelf;
 import 'package:shelf/shelf_io.dart' as io;
@@ -21,6 +22,10 @@ void main(List<String> args) async {
     exitCode = 64;
     return;
   }
+
+  final appConfig = ApplicationConfig();
+
+  appConfig.loadConfigApplication();
 
   var handler = const shelf.Pipeline()
       .addMiddleware(shelf.logRequests())
