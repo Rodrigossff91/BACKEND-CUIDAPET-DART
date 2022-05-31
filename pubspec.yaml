@@ -9,7 +9,24 @@ environment:
 dependencies:
   args: ^2.1.0
   shelf: ^1.1.1
+  shelf_router: ^1.0.0
   dotenv: ^3.0.0
+  mysql1: ^0.19.0
+  get_it: ^6.0.0
+  logger: ^1.0.0
+  injectable: ^1.2.2
   
+
+
 dev_dependencies:
   pedantic: ^1.10.0
+  injectable_generator: ^1.2.2
+  build_runner: ^2.0.0
+  shelf_router_generator: ^1.0.0
+  
+
+dependency_overrides:
+# Foi sobrescrito devido ao mysql1 não foi mirado ainda para o null-safaty
+#logging: ^1.0.0
+# Foi sobrescrito devido ao mysql1 não foi mirado ainda para o null-safaty
+#crypto: ^3.0.0
