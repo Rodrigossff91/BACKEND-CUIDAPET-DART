@@ -9,7 +9,7 @@ part 'teste_controller.g.dart';
 class TesteController {
   @Route.get('/')
   Future<Response> find(Request request) async {
-    return Response.ok(jsonEncode('oi'));
+    return Response.ok(jsonEncode({'message': 'hello'}));
   }
 
   Router get router => _$TesteControllerRouter(this);
