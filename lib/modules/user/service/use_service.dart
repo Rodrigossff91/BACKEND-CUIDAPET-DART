@@ -21,4 +21,9 @@ class UseService implements IUseService {
 
     return userRepository.createUser(userEtity);
   }
+
+  @override
+  Future<User> loginWithEmailPassword(
+          String email, String password, bool supplierUser) =>
+      userRepository.loginWithEmailPassword(email, password, supplierUser);
 }

@@ -11,7 +11,8 @@ import 'package:shelf/src/response.dart';
 class SecurityMiddlewares extends Middlewares {
   final ILogger log;
   final skypUrl = <SecuritySkipUrl>[
-    SecuritySkipUrl(method: 'POST', url: '/auth/register')
+    SecuritySkipUrl(method: 'POST', url: '/auth/register'),
+    SecuritySkipUrl(method: 'POST', url: '/auth/')
   ];
 
   SecurityMiddlewares(this.log);
